@@ -1,0 +1,105 @@
+body {
+	background: #00000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	--default-red-stroke: #EE1A23;
+	--default-grey-black-fill: #FF8D97;
+	--default-strok: rgb(0, 0, 0);
+}
+
+svg text{
+	fill: var(--default-strok);
+	font-family: monospace;
+	font-weight: bolder;
+    z-index: 10;
+    
+}
+
+.map-svg-india {
+	fill: #FFC6CB ;
+	-webkit-transition: .8s ease;
+	-moz-transition: .8s ease;
+	-ms-transition: .8s ease;
+	-o-transition: .8s ease;
+	transition: .8s ease;
+	stroke-dasharray: 180%;
+	stroke-dashoffset: -155%;
+	stroke-width: 1px;
+	stroke: var(--default-strok);
+    z-index: -1;
+    
+}
+.map-svg-india text {
+	stroke:none;
+}
+
+.map-svg-india:hover {
+	cursor: pointer;
+	fill: var(--default-grey-black-fill);
+
+}
+
+.map-svg-india-active {
+	cursor: pointer;
+	stroke: var(--default-red-stroke);
+	fill: var(--default-grey-black-fill);
+	stroke-dashoffset: 0%;
+	-webkit-transition: .8s ease;
+	-moz-transition: .8s ease;
+	-ms-transition: .8s ease;
+	-o-transition: .8s ease;
+}
+.map-svg-india-active text{
+	stroke: none;
+}
+
+.pointer-svg-map {
+	fill: var(--default-red-stroke);
+	animation-direction: normal;
+	animation-delay: .3s;
+}
+
+.inactive-map-svg {
+	opacity: .5;
+	stroke: none !important;
+}
+
+.inactive-map-svg:hover {
+	stroke-dashoffset: -120%;
+	cursor: inherit;
+	fill: var(--default-grey-black-fill);
+}
+
+@keyframes pointer {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+#State-select {
+	display: flex;
+	flex-direction: column;
+}
+
+.select-penal {
+    padding-buttom: -500px;
+}
+
+.select-state {
+	outline: none;
+	height: 40px;
+	width: 250px;
+	padding: 10px 18px;
+	border-radius: 32px;
+	color: #3c3c3c;
+	margin-bottom: 2rem;
+}
+
+.abreviation-state {
+    z-index: 1;
+}
